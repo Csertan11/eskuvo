@@ -15,3 +15,20 @@ const navLinks = document.querySelector('.nav-links');
 mobileMenu.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
+
+// Ülésrend kereső
+const searchInput = document.getElementById('searchName');
+const guestList = document.getElementById('guestList');
+const guests = guestList.getElementsByTagName('li');
+
+searchInput.addEventListener('keyup', () => {
+  const filter = searchInput.value.toLowerCase();
+  for (let i = 0; i < guests.length; i++) {
+    const txtValue = guests[i].textContent || guests[i].innerText;
+    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+      guests[i].style.display = "";
+    } else {
+      guests[i].style.display = "none";
+    }
+  }
+});
