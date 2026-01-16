@@ -7,3 +7,11 @@ setInterval(() => {
   document.getElementById("countdown").innerText =
     days + " nap múlva találkozunk ❤️";
 }, 1000);
+
+// Mobile menu toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
