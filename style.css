@@ -147,10 +147,9 @@ footer {
   nav.show {
     display: flex;
   }
-}
-
 
   .menu-toggle {
     display: block;
   }
 }
+
