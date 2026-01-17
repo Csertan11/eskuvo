@@ -2,77 +2,78 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8">
-  <title>Esküvő</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esküvő – Siófok</title>
+
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<nav>
-  <div class="nav-container">
+<header>
+  <div class="header-inner">
     <div class="logo">💍 Jegyespár</div>
-    <div class="menu-toggle" id="mobile-menu">☰</div>
-    <ul class="nav-links">
-      <li><a href="#jegyespar">Jegyespár</a></li>
-      <li><a href="#program">Program</a></li>
-      <li><a href="#erkezes">Érkezés</a></li>
-      <li><a href="#ulesrend">Ülésrend</a></li>
 
-    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav">
+      <a href="#jegyespar">Jegyespár</a>
+      <a href="#program">Program</a>
+      <a href="#erkezes">Érkezés</a>
+      <a href="#ulesrend">Ülésrend</a>
+    </nav>
   </div>
-</nav>
-
+</header>
 
 <section class="hero" id="jegyespar">
   <h1>Összeházasodunk 💍</h1>
-  <p>2026. június • Siófok • Azúr Hotel</p>
-  <p>Nagy szeretettel várunk benneteket!</p>
+  <p class="subtitle">2026. június • Siófok • Azúr Hotel</p>
+  <p class="subtitle">Nagy szeretettel várunk Benneteket!</p>
 </section>
 
 <section id="program">
-  <h2>Program 📆</h2>
-  <p><strong>15:00</strong> – Vendégek érkezése</p>
-  <p><strong>16:00</strong> – Szertartás</p>
-  <p><strong>17:00</strong> – Gratuláció, fotózás</p>
-  <p><strong>18:30</strong> – Vacsora</p>
-  <p><strong>20:00</strong> – Ünneplés 🎉</p>
-  
+  <h2>Program 📅</h2>
+  <ul class="program-list">
+    <li><strong>15:00</strong> – Vendégek érkezése</li>
+    <li><strong>16:00</strong> – Szertartás</li>
+    <li><strong>17:00</strong> – Fotózás, pezsgőzés</li>
+    <li><strong>19:00</strong> – Vacsora</li>
+    <li><strong>22:00</strong> – Tánc & buli 🎉</li>
+  </ul>
 </section>
 
 <section id="erkezes">
   <h2>Érkezés 📍</h2>
   <p>Siófok – Azúr Hotel</p>
 
-
-</body>
-</html>
-<h2>Helyszín 📍</h2>
-<p>Siófok – Azúr Hotel</p>
-
-<div class="map-container">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2725.762559664301!2d18.037814126225097!3d46.90738787113425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4769c09dae4fc20b%3A0xd982c67bff05a6f7!2sHotel%20Az%C3%BAr!5e0!3m2!1shu!2shu!4v1768581599786!5m2!1shu!2shu"
-    width="100%"
-    height="350"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2725.762559664301!2d18.037814126225097!3d46.90738787113425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4769c09dae4fc20b%3A0xd982c67bff05a6f7!2sHotel%20Az%C3%BAr!5e0!3m2!1shu!2shu!4v1768581599786!5m2!1shu!2shu"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
 
 <section id="ulesrend">
-  <h2>Ülésrend 🪑</h2>
-  <p>Keresd meg a neved, hogy hol ülsz:</p>
+  <h2>Ülésrend 🔍</h2>
+  <p>Írd be a neved:</p>
 
-  <input type="text" id="searchName" placeholder="Írd be a neved..." />
+  <input type="text" id="searchInput" placeholder="Pl. Kiss Anna" onkeyup="searchGuest()">
 
   <ul id="guestList">
-    <li>Alice Kovács - Asztal 1</li>
-    <li>Bence Nagy - Asztal 2</li>
-    <li>Csilla Tóth - Asztal 3</li>
-    <li>Dávid Horváth - Asztal 1</li>
-    <li>Eszter Farkas - Asztal 2</li>
-    <!-- ide jöhetnek a vendégek nevei -->
+    <li data-name="Kiss Anna">Kiss Anna – 3. asztal</li>
+    <li data-name="Nagy Péter">Nagy Péter – 1. asztal</li>
+    <li data-name="Szabó Éva">Szabó Éva – 2. asztal</li>
+    <li data-name="Tóth Gábor">Tóth Gábor – 4. asztal</li>
   </ul>
 </section>
+
+<footer>
+  <p>❤️ 2026 • Köszönjük, hogy velünk ünnepelsz!</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
