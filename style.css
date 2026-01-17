@@ -41,9 +41,10 @@ header {
 }
 
 nav {
-  display: flex;
+  display: flex;   /* DESKTOP */
   gap: 20px;
 }
+
 
 nav a {
   text-decoration: none;
@@ -146,6 +147,8 @@ footer {
   nav.show {
     display: flex;
   }
+}
+
 
   .menu-toggle {
     display: block;
