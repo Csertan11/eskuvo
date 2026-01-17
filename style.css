@@ -1,3 +1,7 @@
+body {
+  background: red !important;
+}
+
 :root {
   --primary: #551D23;
   --secondary: #8C3A40;
