@@ -157,19 +157,32 @@ footer {
   }
 }
 
-.video-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.hero {
+  position: relative;
+  height: 70vh;
+  max-height: 600px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.video-bg video {
+.hero-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.55;
 }
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(247, 243, 239, 0.85);
+  padding: 30px 40px;
+  border-radius: 20px;
+}
+
 
