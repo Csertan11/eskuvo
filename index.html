@@ -11,6 +11,19 @@
 
 <body>
 
+<!-- ===== NYITÓ OLDAL – MEGHÍVÓ ===== -->
+<div id="landing">
+  <div class="invitation">
+    <h1>Szívesen látunk az esküvőnkön!</h1>
+    <p>Kérlek, nyisd ki a meghívót a weboldal megtekintéséhez</p>
+    <div class="envelope">
+      <div class="flap"></div>
+      <button id="openBtn">Megnyitás</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FŐ OLDAL ===== -->
 <header>
   <div class="header-inner">
     <div class="logo">💍</div>
@@ -31,7 +44,6 @@
 
 <!-- ===== HERO VIDEÓ + SZÖVEG ===== -->
 <section class="hero" id="jegyespar">
-
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="background.mp4" type="video/mp4">
   </video>
@@ -42,7 +54,6 @@
     <p class="subtitle">Siófok · Azúr Hotel</p>
     <p class="subtitle">Sok szeretettel várunk Benneteket!</p>
   </div>
-
 </section>
 
 <section id="program">
@@ -53,7 +64,7 @@
     <li><strong>16:00</strong> – Fotózás, pezsgőzés</li>
     <li><strong>19:00</strong> – Vacsora</li>
     <li><strong>22:00</strong> – Tánc & buli 🎉</li>
-    <li><strong>00:00</strong> – Menyasszonytánc 💃🕺 </li>
+    <li><strong>00:00</strong> – Menyasszonytánc 💃🕺</li>
   </ul>
 </section>
 
@@ -73,11 +84,9 @@
 <section id="ulesrend">
   <h2>Ülésrend 🔍</h2>
   <p>Írd be a neved:</p>
-
   <input type="text" id="searchInput" placeholder="Pl. Kiss Anna" onkeyup="searchGuest()">
 
   <ul id="guestList">
-
     <li data-name="Bartha Dorottya">Bartha Dorottya – 0. asztal</li>
     <li data-name="Botos Arnold">Botos Arnold – 0. asztal</li>
     <li data-name="Csertan Nara">Csertán Nara – 0. asztal</li>
@@ -126,10 +135,6 @@
     <li data-name="Szalkai Peter">Szálkai Péter – 0. asztal</li>
     <li data-name="Toldi Aniko">Toldi Anikó – 0. asztal</li>
     <li data-name="Toldi Istvan">Toldi István – 0. asztal</li>
-    <li data-name=""> – 0. asztal</li>
-    <li data-name=""> – 0. asztal</li>
-    <li data-name=""> – 0. asztal</li>
-
   </ul>
 </section>
 
@@ -137,6 +142,36 @@
   <p>❤️ 2026 • Köszönjük, hogy velünk ünnepelsz!</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+  // ===== NYITÓ OLDAL SCRIPT =====
+  const openBtn = document.getElementById('openBtn');
+  const landing = document.getElementById('landing');
+
+  openBtn.addEventListener('click', () => {
+    const envelope = document.querySelector('.envelope');
+    envelope.classList.add('open');
+
+    setTimeout(() => {
+      landing.style.display = 'none';
+    }, 1200); // animáció ideje
+  });
+
+  // ===== MENÜ TOGGLE =====
+  function toggleMenu() {
+    const nav = document.getElementById('nav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // ===== KERESÉS GUESTLIST =====
+  function searchGuest() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const list = document.getElementById('guestList').getElementsByTagName('li');
+    for (let i = 0; i < list.length; i++) {
+      const name = list[i].getAttribute('data-name').toLowerCase();
+      list[i].style.display = name.includes(input) ? "" : "none";
+    }
+  }
+</script>
+
 </body>
 </html>

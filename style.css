@@ -44,7 +44,7 @@ header {
 }
 
 .logo {
-  display: none; /* ❌ nincs szükség bal felső Jegyespár feliratra */
+  display: none; /* Nincs szükség bal felső Jegyespár feliratra */
 }
 
 nav {
@@ -95,7 +95,6 @@ nav a:hover {
   content: "";
   position: absolute;
   inset: 0;
- 
   z-index: 1;
 }
 
@@ -123,6 +122,77 @@ nav a:hover {
 
 .subtitle {
   font-size: 1rem;
+}
+
+/* ===== NYITÓ LANDING OLDAL ===== */
+#landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('meghivo-hatter.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  text-align: center;
+  color: #fff;
+}
+
+.invitation {
+  background-color: rgba(0,0,0,0.5);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  font-family: 'Playfair Display', serif;
+}
+
+.invitation h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.invitation p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.envelope {
+  position: relative;
+  display: inline-block;
+}
+
+.flap {
+  width: 150px;
+  height: 100px;
+  background: var(--accent);
+  transform-origin: top;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 20px;
+  transition: transform 1s ease;
+}
+
+.envelope.open .flap {
+  transform: rotateX(-180deg);
+}
+
+#openBtn {
+  padding: 10px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#openBtn:hover {
+  background-color: #e69138;
 }
 
 /* ===== SECTIONS ===== */
