@@ -15,11 +15,12 @@
 html, body {
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* ===== BODY ===== */
 body {
-  margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
@@ -44,7 +45,7 @@ header {
 }
 
 .logo {
-  display: none; /* Nincs szükség bal felső Jegyespár feliratra */
+  display: none;
 }
 
 nav {
@@ -91,13 +92,6 @@ nav a:hover {
   opacity: 0.55;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -141,14 +135,6 @@ nav a:hover {
   text-align: center;
 }
 
-#landing::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: -1;
-}
-
 #landing h1 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -164,7 +150,7 @@ nav a:hover {
   padding: 15px 40px;
   border: none;
   border-radius: 10px;
-  background-color: rgba(201, 162, 77, 0.9);
+  background-color: rgba(201, 162, 77, 0.95);
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
@@ -173,7 +159,6 @@ nav a:hover {
 #openBtn:hover {
   background-color: #e69138;
 }
-
 
 /* ===== SECTIONS ===== */
 section {
