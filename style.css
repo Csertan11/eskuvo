@@ -120,7 +120,7 @@ nav a:hover {
 
 /* ===== LANDING FULLSCREEN ===== */
 #landing {
-  position: fixed;
+  position: center;
   top: 0;
   left: 0;
   width: 90vw;
