@@ -125,7 +125,6 @@ nav a:hover {
 }
 
 /* ===== NYITÓ LANDING OLDAL ===== */
-/* teljes képernyős landing */
 #landing {
   position: fixed;
   top: 0;
@@ -170,7 +169,6 @@ nav a:hover {
   cursor: pointer;
 }
 
-
 /* ===== SECTIONS ===== */
 section {
   max-width: 900px;
@@ -183,7 +181,6 @@ section h2 {
   color: var(--primary);
 }
 
-/* ===== PROGRAM ===== */
 .program-list li {
   margin-bottom: 8px;
 }

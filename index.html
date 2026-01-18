@@ -17,7 +17,6 @@
   <button id="openBtn">Megnyitás</button>
 </div>
 
-
 <!-- ===== FŐ OLDAL ===== -->
 <header>
   <div class="header-inner">
@@ -81,7 +80,12 @@
     <li data-name="Csertan Nara">Csertán Nara – 0. asztal</li>
     <li data-name="Csertan Tamas">Csertán Tamás – 0. asztal</li>
     <li data-name="Csabai Pal">Csabai Pál – 0. asztal</li>
-    <!-- további vendégek... -->
+    <li data-name="Kiss Anna">Kiss Anna – 1. asztal</li>
+    <li data-name="Nagy Péter">Nagy Péter – 2. asztal</li>
+    <li data-name="Tóth Eszter">Tóth Eszter – 3. asztal</li>
+    <li data-name="Farkas Dávid">Farkas Dávid – 1. asztal</li>
+    <li data-name="Horváth Lilla">Horváth Lilla – 2. asztal</li>
+    <!-- ide jöhet még minden vendég -->
   </ul>
 </section>
 
@@ -93,13 +97,14 @@
   // ===== NYITÓ LANDING OLDAL JS =====
   const landing = document.getElementById('landing');
   const openBtn = document.getElementById('openBtn');
-  const envelope = document.querySelector('.envelope');
 
   openBtn.addEventListener('click', () => {
-    envelope.classList.add('open');  // flap animáció
+    // Fade out animáció
+    landing.style.transition = 'opacity 0.8s ease';
+    landing.style.opacity = '0';
     setTimeout(() => {
-      landing.style.display = 'none'; // eltűnik a landing
-    }, 1200);
+      landing.style.display = 'none';
+    }, 800);
   });
 
   // ===== MOBIL MENU TOGGLE =====
