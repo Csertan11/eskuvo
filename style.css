@@ -95,7 +95,7 @@ nav a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(85, 29, 35, 0.35);
+ 
   z-index: 1;
 }
 
