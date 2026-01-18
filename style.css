@@ -126,6 +126,7 @@ nav a:hover {
   width: 100vw;
   height: 100vh;
   background: url('giphy.gif') no-repeat center center / cover;
+  background-size: cover; /* lefedi az egész felületet */
   display: flex;
   flex-direction: column;
   justify-content: center;
