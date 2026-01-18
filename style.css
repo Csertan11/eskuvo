@@ -135,6 +135,11 @@ nav a:hover {
   text-align: center;
 }
 
+.landing-content {
+  background: none !important;
+}
+
+
 #landing h1 {
   font-size: 3rem;
   margin-bottom: 20px;
