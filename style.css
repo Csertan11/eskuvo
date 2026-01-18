@@ -156,7 +156,7 @@ nav a:hover {
   cursor: pointer;
   transition: 0.3s;
 
-  margin-top: 590px; /* ezzel tolod lejjebb a gombot */
+  margin-top: 500px; /* ezzel tolod lejjebb a gombot */
 }
 
 #openBtn:hover {
