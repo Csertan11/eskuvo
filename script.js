@@ -1,7 +1,8 @@
-const landing = document.getElementById('landing');
-document.getElementById('openBtn').addEventListener('click', () => {
-  landing.style.display = 'none'; // eltünteti a landinget
-});
+<div id="landing">
+  <h1>Szívesen látunk az esküvőnkön!</h1>
+  <p>Kérlek, nyisd ki a meghívót a weboldal megtekintéséhez</p>
+  <button id="openBtn">Megnyitás</button>
+</div>
 
 
 function toggleMenu() {
