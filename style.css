@@ -124,7 +124,7 @@ nav a:hover {
   font-size: 1rem;
 }
 
-/* ===== NYITÓ LANDING OLDAL ===== */
+/* ===== LANDING FULLSCREEN ===== */
 #landing {
   position: fixed;
   top: 0;
@@ -167,7 +167,13 @@ nav a:hover {
   background-color: rgba(201, 162, 77, 0.9);
   color: #fff;
   cursor: pointer;
+  transition: 0.3s;
 }
+
+#openBtn:hover {
+  background-color: #e69138;
+}
+
 
 /* ===== SECTIONS ===== */
 section {

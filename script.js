@@ -3,11 +3,8 @@ const landing = document.getElementById('landing');
 const openBtn = document.getElementById('openBtn');
 
 openBtn.addEventListener('click', () => {
-  // Finom animáció (fade out)
   landing.style.transition = 'opacity 0.8s ease';
   landing.style.opacity = '0';
-
-  // 800ms után eltüntetjük a DOM-ból
   setTimeout(() => {
     landing.style.display = 'none';
   }, 800);

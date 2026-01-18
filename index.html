@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<!-- ===== NYITÓ LANDING OLDAL ===== -->
+<!-- ===== TELJES KÉPERNYŐS LANDING ===== -->
 <div id="landing">
   <h1>Szívesen látunk az esküvőnkön!</h1>
   <p>Kérlek, nyisd ki a meghívót a weboldal megtekintéséhez</p>
@@ -20,6 +20,8 @@
 <!-- ===== FŐ OLDAL ===== -->
 <header>
   <div class="header-inner">
+    <div class="logo">💍</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav id="nav">
       <a href="#jegyespar">Jegyespár</a>
       <a href="#program">Program</a>
@@ -29,7 +31,6 @@
       <a href="#jovoknemjovok">Jövök/Nem jövök</a>
       <a href="#extrakeres">Extra kérések/Allergia</a>
     </nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
@@ -37,7 +38,6 @@
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="background.mp4" type="video/mp4">
   </video>
-
   <div class="hero-content">
     <h1>Összeházasodunk 💍</h1>
     <p class="subtitle">2026. június 20.</p>
@@ -49,19 +49,17 @@
 <section id="program">
   <h2>Program 📅</h2>
   <ul class="program-list">
-    <li><strong>13:00</strong> – Vendégek érkezése</li>
-    <li><strong>15:00</strong> – Szertartás</li>
-    <li><strong>16:00</strong> – Fotózás, pezsgőzés</li>
+    <li><strong>15:00</strong> – Vendégek érkezése</li>
+    <li><strong>16:00</strong> – Szertartás</li>
+    <li><strong>17:00</strong> – Fotózás, pezsgőzés</li>
     <li><strong>19:00</strong> – Vacsora</li>
     <li><strong>22:00</strong> – Tánc & buli 🎉</li>
-    <li><strong>00:00</strong> – Menyasszonytánc 💃🕺 </li>
   </ul>
 </section>
 
 <section id="erkezes">
   <h2>Érkezés 📍</h2>
   <p>Siófok – Azúr Hotel</p>
-
   <div class="map-container">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2725.762559664301!2d18.037814126225097!3d46.90738787113425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4769c09dae4fc20b%3A0xd982c67bff05a6f7!2sHotel%20Az%C3%BAr!5e0!3m2!1shu!2shu!4v1768581599786!5m2!1shu!2shu"
@@ -73,19 +71,56 @@
 
 <section id="ulesrend">
   <h2>Ülésrend 🔍</h2>
+  <p>Írd be a neved:</p>
   <input type="text" id="searchInput" placeholder="Pl. Kiss Anna" onkeyup="searchGuest()">
   <ul id="guestList">
+    <!-- teljes névlista a példádból -->
     <li data-name="Bartha Dorottya">Bartha Dorottya – 0. asztal</li>
     <li data-name="Botos Arnold">Botos Arnold – 0. asztal</li>
     <li data-name="Csertan Nara">Csertán Nara – 0. asztal</li>
     <li data-name="Csertan Tamas">Csertán Tamás – 0. asztal</li>
     <li data-name="Csabai Pal">Csabai Pál – 0. asztal</li>
-    <li data-name="Kiss Anna">Kiss Anna – 1. asztal</li>
-    <li data-name="Nagy Péter">Nagy Péter – 2. asztal</li>
-    <li data-name="Tóth Eszter">Tóth Eszter – 3. asztal</li>
-    <li data-name="Farkas Dávid">Farkas Dávid – 1. asztal</li>
-    <li data-name="Horváth Lilla">Horváth Lilla – 2. asztal</li>
-    <!-- ide jöhet még minden vendég -->
+    <li data-name="Forgon Istvan">Forgon István – 0. asztal</li>
+    <li data-name="Forgon Krisztina">Forgon Krisztina – 0. asztal</li>
+    <li data-name="Gilicze Bernadett">Gilicze Bernadett – 0. asztal</li>
+    <li data-name="Herbert Attila">Herbert Attila – 0. asztal</li>
+    <li data-name="Hockstock Aron">Hockstock Áron – 0. asztal</li>
+    <li data-name="Hockstock Bettina">Hockstock Bettina – 0. asztal</li>
+    <li data-name="Hockstock Daniel">Hockstock Dániel – 0. asztal</li>
+    <li data-name="Hockstock Janos">Hockstock János – 0. asztal</li>
+    <li data-name="Hockstock Mate">Hockstock Máté – 0. asztal</li>
+    <li data-name="Hockstock Marina">Hockstock Marina – 0. asztal</li>
+    <li data-name="Illes Kornelia">Illés Kornélia – 0. asztal</li>
+    <li data-name="Juhasz Istvan">Juhász István – 0. asztal</li>
+    <li data-name="Kovacsne Csertan Erika">Kovácsné Csertán Erika – 0. asztal</li>
+    <li data-name="Kovacs Gabor">Kovács Gábor – 0. asztal</li>
+    <li data-name="Kozma Andras">Kozma András – 0. asztal</li>
+    <li data-name="Kozma Anita">Kozma Anita – 0. asztal</li>
+    <li data-name="Kozma Kornel">Kozma Kornél – 0. asztal</li>
+    <li data-name="Kozma Nikolett">Kozma Nikolett – 0. asztal</li>
+    <li data-name="Kozma Norbert">Kozma Norbert – 0. asztal</li>
+    <li data-name="Kozma Sara">Kozma Sára – 0. asztal</li>
+    <li data-name="Kozma Zsofi">Kozma Zsófia – 0. asztal</li>
+    <li data-name="Liza">Liza – 0. asztal</li>
+    <li data-name="Liebermann Alexandra">Liebermann Alexandra – 0. asztal</li>
+    <li data-name="Liebermann Krisztina">Liebermann Krisztina – 0. asztal</li>
+    <li data-name="Lorincz Judit">Lőrincz Judit – 0. asztal</li>
+    <li data-name="Magyar Gergely">Magyar Gergely – 0. asztal</li>
+    <li data-name="Marko Lajos">Markó Lajos – 0. asztal</li>
+    <li data-name="Marko Lajosne">Markó Lajosné – 0. asztal</li>
+    <li data-name="Marko Lena">Markó Léna – 0. asztal</li>
+    <li data-name="Marko Szilard">Markó Szilárd – 0. asztal</li>
+    <li data-name="Naske Hajnlaka">Naske Hajnalka – 0. asztal</li>
+    <li data-name="Paradi Vanda">Parádi Vanda – 0. asztal</li>
+    <li data-name="Salamon Istvan">Salamon István – 0. asztal</li>
+    <li data-name="Seri Katalin">Séri Katalin – 0. asztal</li>
+    <li data-name="Seri Peter">Séri Péter – 0. asztal</li>
+    <li data-name="Siki Erzsebet">Siki Erzsébet – 0. asztal</li>
+    <li data-name="Szabo Laszlo">Szabó László – 0. asztal</li>
+    <li data-name="Szili Katalin">Szili Katalin – 0. asztal</li>
+    <li data-name="Szalkai Peter">Szálkai Péter – 0. asztal</li>
+    <li data-name="Toldi Aniko">Toldi Anikó – 0. asztal</li>
+    <li data-name="Toldi Istvan">Toldi István – 0. asztal</li>
   </ul>
 </section>
 
@@ -93,35 +128,6 @@
   <p>❤️ 2026 • Köszönjük, hogy velünk ünnepelsz!</p>
 </footer>
 
-<script>
-  // ===== NYITÓ LANDING OLDAL JS =====
-  const landing = document.getElementById('landing');
-  const openBtn = document.getElementById('openBtn');
-
-  openBtn.addEventListener('click', () => {
-    // Fade out animáció
-    landing.style.transition = 'opacity 0.8s ease';
-    landing.style.opacity = '0';
-    setTimeout(() => {
-      landing.style.display = 'none';
-    }, 800);
-  });
-
-  // ===== MOBIL MENU TOGGLE =====
-  function toggleMenu() {
-    document.getElementById('nav').classList.toggle('show');
-  }
-
-  // ===== ÜLÉSREND KERESÉS =====
-  function searchGuest() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    const list = document.getElementById('guestList').getElementsByTagName('li');
-    for (let i = 0; i < list.length; i++) {
-      const name = list[i].dataset.name.toLowerCase();
-      list[i].style.display = name.includes(input) ? "" : "none";
-    }
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
