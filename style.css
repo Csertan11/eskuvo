@@ -89,7 +89,7 @@ nav a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.05;
+  opacity: 0.9;
 }
 
 .hero-content {
@@ -125,7 +125,7 @@ nav a:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('meghivo-animacio.webp') no-repeat center center / cover;
+  background: url('meghivo-animacio.mov') no-repeat center center / cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
