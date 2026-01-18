@@ -125,75 +125,41 @@ nav a:hover {
 }
 
 /* ===== NYITÓ LANDING OLDAL ===== */
+/* teljes képernyős landing */
 #landing {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('meghivo-hatter.jpg') no-repeat center center;
-  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background: url('meghivo-hatter.jpg') no-repeat center center / cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  color: white;
   text-align: center;
-  color: #fff;
 }
 
-.invitation {
-  background-color: rgba(0,0,0,0.5);
-  padding: 60px 40px;
-  border-radius: 15px;
-  width: 80%;       /* korábban 90% */
-  max-width: 900px; /* korábban 400px */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  font-family: 'Playfair Display', serif;
-}
-
-
-.invitation h1 {
-  font-size: 2em;
+#landing h1 {
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.invitation p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-.envelope {
-  position: relative;
-  display: inline-block;
-}
-
-.flap {
-  width: 150px;
-  height: 100px;
-  background: var(--accent);
-  transform-origin: top;
-  border-radius: 10px 10px 0 0;
-  margin-bottom: 20px;
-  transition: transform 1s ease;
-}
-
-.envelope.open .flap {
-  transform: rotateX(-180deg);
+#landing p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
 }
 
 #openBtn {
-  padding: 10px 25px;
-  font-size: 18px;
+  font-size: 1.5rem;
+  padding: 15px 40px;
   border: none;
-  border-radius: 8px;
-  background-color: var(--accent);
+  border-radius: 10px;
+  background-color: rgba(201, 162, 77, 0.9);
   color: #fff;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-#openBtn:hover {
-  background-color: #e69138;
 }
 
 /* ===== SECTIONS ===== */

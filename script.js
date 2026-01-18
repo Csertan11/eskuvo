@@ -1,3 +1,9 @@
+const landing = document.getElementById('landing');
+document.getElementById('openBtn').addEventListener('click', () => {
+  landing.style.display = 'none'; // eltünteti a landinget
+});
+
+
 function toggleMenu() {
   document.getElementById("nav").classList.toggle("show");
 }
