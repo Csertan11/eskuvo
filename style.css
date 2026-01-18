@@ -125,7 +125,7 @@ nav a:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('meghivo-animacio2.mp4') no-repeat center center / cover;
+  background: url('giphy.gif') no-repeat center center / cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
