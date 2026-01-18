@@ -98,8 +98,9 @@ nav a:hover {
  background: rgba(247, 243, 239, 0.2); /* 20% láthatóság */
   padding: 30px 40px;
   border-radius: 20px;
-  max-width: 520px;
+  max-width: 700px;
   width: 90%;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* árnyék a szöveg mögé, hogy kiemelje */
 }
 
 .hero h1 {
