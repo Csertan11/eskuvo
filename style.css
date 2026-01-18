@@ -134,15 +134,6 @@ nav a:hover {
   color: white;
   text-align: center;
 }
-/* A landing szöveg konténer */
-.landing-content {
-  background: none;       /* teljesen átlátszó */
-  padding: 0;             /* opcionális, ha nem akarsz plusz térközt */
-  border-radius: 0;       /* nincs lekerekítés */
-  z-index: 2;             /* biztos, hogy a videó fölött van */
-  color: white;           /* a szöveg látszódjon */
-  text-align: center;
-}
 
 
 #landing h1 {
