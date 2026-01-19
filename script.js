@@ -24,3 +24,20 @@ function searchGuest() {
     list[i].style.display = name.includes(input) ? "" : "none";
   }
 }
+// Modal JS
+function openModal() {
+  document.getElementById('extraModal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('extraModal').style.display = 'none';
+}
+
+// Bezárás ha a háttérre kattintanak
+window.onclick = function(event) {
+  const modal = document.getElementById('extraModal');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+

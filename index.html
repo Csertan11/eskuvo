@@ -29,7 +29,7 @@
       <a href="#erkezes">Érkezés</a>
       <a href="#ulesrend">Ülésrend</a>
       <a href="#menu">Menü</a>
-      <a href="#extrakeres" onclick="extraUzenet()">Extra kérések/Allergia</a>
+      <a href="javascript:void(0)" onclick="openModal()">Extra kérések/Allergia</a>
     </nav>
   </div>
 </header>
@@ -131,6 +131,18 @@
     <li data-name=""> – 0. asztal</li>
   </ul>
 </section>
+<!-- Extra kérések menü link -->
+<a href="javascript:void(0)" onclick="openModal()">Extra kérések/Allergia</a>
+
+<!-- Modal HTML -->
+<div id="extraModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Extra kérések / Allergia</h2>
+    <p>Bármi extra kérés vagy allergia esetén kérjük, jelezzétek felénk!</p>
+  </div>
+</div>
+
 
 <footer>
   <p>❤️ 2026 • Köszönjük, hogy velünk ünnepelsz!</p>
@@ -139,9 +151,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-<script>
-function extraUzenet() {
-  alert("Bármi extra kérés vagy allergia esetén kérjük, jelezzétek felénk!");
-}
-</script>
