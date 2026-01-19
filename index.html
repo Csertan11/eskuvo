@@ -29,8 +29,7 @@
       <a href="#erkezes">Érkezés</a>
       <a href="#ulesrend">Ülésrend</a>
       <a href="#menu">Menü</a>
-      <a href="#jovoknemjovok">Jövök/Nem jövök</a>
-      <a href="#extrakeres">Extra kérések/Allergia</a>
+      <a href="#extrakeres" onclick="extraUzenet()">Extra kérések/Allergia</a>
     </nav>
   </div>
 </header>
@@ -71,6 +70,7 @@
     </iframe>
   </div>
 </section>
+
 
 <section id="ulesrend">
   <h2>Ülésrend 🔍</h2>
@@ -139,3 +139,9 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+<script>
+function extraUzenet() {
+  alert("Bármi extra kérés vagy allergia esetén kérjük, jelezzétek felénk!");
+}
+</script>
