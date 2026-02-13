@@ -40,10 +40,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-const music = document.getElementById("bgMusic");
+const music = document.getElementById('bgMusic');
 
-openBtn.addEventListener("click", () => {
-  music.volume = 0.25;
-  music.play();
+openBtn.addEventListener('click', () => {
+  music.volume = 0.4; // halk háttérzene
+  music.play().catch(() => {
+    console.log("Autoplay blocked");
+  });
 });
-
