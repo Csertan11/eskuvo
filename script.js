@@ -40,4 +40,10 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+const music = document.getElementById("bgMusic");
+
+openBtn.addEventListener("click", () => {
+  music.volume = 0.25;
+  music.play();
+});
 
