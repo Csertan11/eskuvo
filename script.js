@@ -48,3 +48,25 @@ openBtn.addEventListener('click', () => {
     console.log("Autoplay blocked");
   });
 });
+
+// ===== VISSZASZÁMLÁLÁS =====
+function updateCountdown() {
+  const weddingDate = new Date("2026-06-20T16:00:00").getTime();
+  const now = new Date().getTime();
+  const diff = weddingDate - now;
+
+  if (diff <= 0) {
+    document.getElementById("timer").innerHTML = "Elkezdődött 💍";
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+  document.getElementById("timer").innerHTML =
+    `${days} nap ${hours} óra ${minutes} perc`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 60000);
