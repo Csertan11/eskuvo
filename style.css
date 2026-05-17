@@ -336,19 +336,28 @@ footer {
   color: var(--secondary);
 }
 
-/* ===== ÜLÉSREND GOMB ===== */
+/* ===== ÜLÉSREND GOMB (KÖZÉPRE, ELEGÁNS) ===== */
+.ulesrend-btn-wrapper {
+  text-align: center;
+  margin: 30px 0 40px;
+}
+
 .btn-ulesrend {
   display: inline-block;
-  margin-bottom: 20px;
-  padding: 12px 22px;
-  background-color: var(--accent);
-  color: white;
+  padding: 14px 34px;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  color: #fff;
   text-decoration: none;
-  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
   font-weight: 500;
-  transition: 0.3s;
+  border-radius: 999px; /* teljesen lekerekített */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
 }
 
 .btn-ulesrend:hover {
-  background-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+  opacity: 0.95;
 }
