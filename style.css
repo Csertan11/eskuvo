@@ -336,3 +336,19 @@ footer {
   color: var(--secondary);
 }
 
+/* ===== ÜLÉSREND GOMB ===== */
+.btn-ulesrend {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 12px 22px;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-ulesrend:hover {
+  background-color: var(--secondary);
+}
